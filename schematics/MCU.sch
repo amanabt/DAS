@@ -1,0 +1,6 @@
+v 20130925 2
+C 40000 40000 0 0 0 title-B.sym
+T 53900 40100 9 10 1 0 0 0 1
+Aman Abhishek Tiwari
+T 50000 40700 9 10 1 0 0 0 1
+MCU

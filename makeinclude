@@ -1,0 +1,42 @@
+BIN_FOLDER = /usr/bin
+
+CC = $(BIN_FOLDER)/avr-gcc
+AR = $(BIN_FOLDER)/avr-ar crv
+OBJCOPY = $(BIN_FOLDER)/avr-objcopy
+OBJDUMP = $(BIN_FOLDER)/avr-objdump
+AVRDUDE = $(BIN_FOLDER)/avrdude
+RM = rm -rfv
+
+FLAGS = \
+	-std=c++11 \
+	-Wall -O3 \
+	-fno-threadsafe-statics -fdata-sections -ffunction-sections -fno-exceptions \
+	-mmcu=atmega328 \
+	-fverbose-asm -g -Wa,-a=${basename $<}.s \
+	-DTIMER_INTERVAL=10e-3 \
+	-DF_CPU=8000000UL \
+	-DUART_BAUDRATE=38400\
+
+CFLAGS = $(FLAGS) -c
+MFLAGS = $(FLAGS) -M
+LFLAGS = -mmcu=atmega328 -Wl,--gc-sections,-Map,app.map
+
+INCLUDE = \
+	-I $(top_builddir)/code/stl \
+	-I $(top_builddir)/code/avr \
+	-I $(top_builddir)/code/sys \
+	-I $(top_builddir)/code/app
+
+LIBS = \
+	-lsys -L $(top_builddir)/code/sys/src \
+	-lavr -L $(top_builddir)/code/avr/src \
+
+LIBDEPS = \
+	$(top_builddir)/code/sys/src/libsys.a \
+	$(top_builddir)/code/avr/src/libavr.a
+
+%.dep: %.cxx
+	$(CC) $(MFLAGS) $(INCLUDE) $< > $@
+
+%.o: %.cxx
+	$(CC) $(CFLAGS) $(INCLUDE) $< -o $@

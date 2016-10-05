@@ -1,0 +1,14 @@
+#ifndef __NEW__
+#define __NEW__
+
+inline void* operator new (unsigned int size, void* at)
+{
+	return at;
+}
+
+inline void* operator new[] (unsigned int size, void* at)
+{
+	return at;
+}
+
+#endif

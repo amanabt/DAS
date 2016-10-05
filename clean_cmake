@@ -1,3 +1,4 @@
 #! /bin/bash
-make clean
+
 rm -rfv CMakeCache.txt  cmake_install.cmake CMakeFiles *~ .*~ *.kate-swp
+find . -name \*~ | xargs rm -v

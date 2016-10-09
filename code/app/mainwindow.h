@@ -31,6 +31,7 @@
 #include <QFileDialog>
 #include "qcpdocumentobject.h"
 #include <vector>
+#include <utility>
 
 namespace Ui {
 class MainWindow;
@@ -38,22 +39,30 @@ class MainWindow;
 
 class MainWindow : public QMainWindow
 {
-  Q_OBJECT
-  
+	Q_OBJECT
+	
 public:
-  explicit MainWindow (QWidget *parent = 0);
-  ~MainWindow ();
-  
-  void setupPlot (void);
-  void add_datapoint (float datapoint) { _datapoints.push_back(datapoint); }
-  
-private slots:
-  void on_actionInsert_Plot_triggered();
-  void on_actionSave_Document_triggered();
-  
+	typedef double data_type;
+	
+public:
+	explicit MainWindow (QWidget *parent = 0);
+	~MainWindow ();
+	
+public:
+	void add_datapoint (double x, double y)
+	{ _x.push_back (x); _y.push_back (y); }
+
 private:
-  Ui::MainWindow *ui;
-  std::vector<float> _datapoints;
+	void init_plot (void) const;
+	void update_plot (void) const;
+
+private slots:
+	void on_actionInsert_Plot_triggered (void);
+	void on_actionSave_Document_triggered (void);
+
+private:
+	Ui::MainWindow *ui;
+	QVector<data_type> _x, _y;
 };
 
 #endif // MAINWINDOW_H

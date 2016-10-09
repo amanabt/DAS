@@ -25,6 +25,7 @@
 
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include <cmath>
 
 MainWindow::MainWindow(QWidget *parent) :
 	QMainWindow(parent),
@@ -35,11 +36,14 @@ MainWindow::MainWindow(QWidget *parent) :
 	connect(ui->cbUseCurrentSize, SIGNAL(toggled(bool)), ui->sbHeight, SLOT(setDisabled(bool)));
 	
 	ui->plot->axisRect()->setMinimumSize(300, 180);
-	setupPlot();
+
+	QCPDocumentObject *plotObjectHandler = 
+		new QCPDocumentObject(this);
+
+	ui->textEdit->document()->documentLayout()->registerHandler(
+		QCPDocumentObject::PlotTextFormat, plotObjectHandler);
 	
-	// register the plot document object (only needed once, no matter how many plots will be in the QTextDocument):
-	QCPDocumentObject *plotObjectHandler = new QCPDocumentObject(this);
-	ui->textEdit->document()->documentLayout()->registerHandler(QCPDocumentObject::PlotTextFormat, plotObjectHandler);
+	init_plot();
 }
 
 MainWindow::~MainWindow()
@@ -48,48 +52,41 @@ MainWindow::~MainWindow()
 }
 
 void
-MainWindow::setupPlot()
+MainWindow::init_plot (void) const
 {
-	// The following plot setup is taken from the sine demo:
-	// add two new graphs and set their look:
 	ui->plot->addGraph();
-	ui->plot->graph(0)->setPen(QPen(Qt::blue)); // line color blue for first graph
-	ui->plot->graph(0)->setBrush(QBrush(QColor(0, 0, 255, 20))); // first graph will be filled with translucent blue
+	ui->plot->graph(0)->setPen(QPen(Qt::blue));
+	ui->plot->graph(0)->setBrush(QBrush(QColor(0, 0, 255, 20)));
+}
 
-	QVector<double> x(250), y0(250), y1(250);
-	for (int i=0; i<250; ++i)
-	{
-// 		_datapoints
-		x[i] = i/10.0;
-		y0[i] = qExp (-i/150.0)*qSin(i/10.0); // exponentially decaying cosine
-	}
-	// configure right and top axis to show ticks but no labels:
-	// (see QCPAxisRect::setupFullAxesBox for a quicker method to do this)
-	ui->plot->xAxis2->setVisible(true);
-	ui->plot->xAxis2->setTickLabels(false);
-	ui->plot->yAxis2->setVisible(true);
-	ui->plot->yAxis2->setTickLabels(false);
-	// make left and bottom axes always transfer their ranges to right and top axes:
-	connect(ui->plot->xAxis, SIGNAL(rangeChanged(QCPRange)), ui->plot->xAxis2, SLOT(setRange(QCPRange)));
-	connect(ui->plot->yAxis, SIGNAL(rangeChanged(QCPRange)), ui->plot->yAxis2, SLOT(setRange(QCPRange)));
-	// pass data points to graphs:
-	ui->plot->graph(0)->setData(x, y0);
-	// let the ranges scale themselves so graph 0 fits perfectly in the visible area:
+void
+MainWindow::update_plot (void) const
+{
+	ui->plot->xAxis2->setVisible (true);
+	ui->plot->xAxis2->setTickLabels (false);
+	ui->plot->yAxis2->setVisible (true);
+	ui->plot->yAxis2->setTickLabels (false);
+
+	connect (ui->plot->xAxis,
+			 SIGNAL(rangeChanged(QCPRange)),
+			 ui->plot->xAxis2,
+			 SLOT(setRange(QCPRange)));
+	
+	connect (ui->plot->yAxis,
+			 SIGNAL(rangeChanged(QCPRange)),
+			 ui->plot->yAxis2,
+			 SLOT(setRange(QCPRange)));
+
+	ui->plot->graph(0)->setData(_x, _y);
 	ui->plot->graph(0)->rescaleAxes();
-	// same thing for graph 1, but only enlarge ranges (in case graph 1 is smaller than graph 0):
-	// Note: we could have also just called customPlot->rescaleAxes(); instead
-	// Allow user to drag axis ranges with mouse, zoom with mouse wheel and select graphs by clicking:
-	ui->plot->setInteractions(QCP::iRangeDrag | QCP::iRangeZoom | QCP::iSelectPlottables);
+	ui->plot->setInteractions(
+		QCP::iRangeDrag | QCP::iRangeZoom | QCP::iSelectPlottables);
 }
 
 void
 MainWindow::on_actionInsert_Plot_triggered()
 {
 	QTextCursor cursor = ui->textEdit->textCursor();
-	
-	// insert the current plot at the cursor position. QCPDocumentObject::generatePlotFormat creates a
-	// vectorized snapshot of the passed plot (with the specified width and height) which gets inserted
-	// into the text document.
 	double width = ui->cbUseCurrentSize->isChecked() ? 0 : ui->sbWidth->value();
 	double height = ui->cbUseCurrentSize->isChecked() ? 0 : ui->sbHeight->value();
 	cursor.insertText(QString(QChar::ObjectReplacementCharacter), QCPDocumentObject::generatePlotFormat(ui->plot, width, height));

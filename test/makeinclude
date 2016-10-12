@@ -1,0 +1,5 @@
+CC = g++
+LIBS = -L ../code/driver/src -lQAFE -lftdi -lpthread
+
+%.o: %.cxx
+	${CC} -Wall -O3 -std=c++11 -c $< -o $@

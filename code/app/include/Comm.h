@@ -19,6 +19,8 @@ enum class COMM_OPCODE
 	NOP,
 	IDN,
 
+	KEEP_ALIVE,
+
 	__END__
 };
 
@@ -69,11 +71,36 @@ private:
 /******************************************************************/
 /******************************************************************/
 
+class CommPacket_KeepAlive : public CommPacket
+{
+protected:
+	CommPacket_KeepAlive (void) :
+		CommPacket (static_cast<uint16_t> (COMM_OPCODE::KEEP_ALIVE))
+	{}
+};
+
+class CommRequest_KeepAlive : public CommPacket_KeepAlive
+{
+private:
+	CommRequest_KeepAlive (void);
+};
+
+class CommResponse_KeepAlive : public CommPacket_KeepAlive
+{
+public:
+	CommResponse_KeepAlive (void)
+	{}
+};
+
+/******************************************************************/
+/******************************************************************/
+
 enum class COMM_CBCODE
 {
 	NOP,
 	IDN,
 	
+	KEEP_ALIVE,
 	__END__
 };
 
@@ -104,10 +131,23 @@ public:
 /******************************************************************/
 /******************************************************************/
 
+class CommCB_KeepAlive : public CommCB
+{
+public:
+	CommCB_KeepAlive (void) :
+		CommCB (COMM_CBCODE::KEEP_ALIVE)
+	{}
+};
+
+/******************************************************************/
+/******************************************************************/
+
 union CommCB_Union
 {
 	char gen0 [sizeof (CommCB)];
 	char gen1 [sizeof (CommCB_Identity)];
+
+	char gen2 [sizeof (CommCB_KeepAlive)];
 };
 
 /******************************************************************/
@@ -123,6 +163,7 @@ public:
 
 public:
 	void transmitIdentity (const char* identity);
+	void transmitKeepAlive      (void);
 
 private:
 	UART* _uart;
@@ -141,6 +182,8 @@ private:
 
 	void nopCB                 (const void* data, uint16_t size);
 	void identityCB            (const void* data, uint16_t size);
+
+	void keepAliveCB           (const void* data, uint16_t size);
 
 private:
 	const void* transmit (const void* data, uint16_t size);

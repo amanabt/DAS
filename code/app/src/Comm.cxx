@@ -111,7 +111,8 @@ void Comm::interpret (const void* data, uint16_t size)
 	static const cb_t cbs[] PROGMEM =
 	{
 		&Comm::nopCB,
-		&Comm::identityCB
+		&Comm::identityCB,
+		&Comm::keepAliveCB
 	};
 
 // 	debug_comm();
@@ -138,6 +139,20 @@ void Comm::identityCB (const void* , uint16_t size)
 	do_callback (new (&_callbackObject) CommCB_Identity);
 }
 
+/*********************************************************************/
+
+void Comm::keepAliveCB (const void* data, uint16_t size)
+{
+	if (size < sizeof (CommRequest_KeepAlive))
+		return;
+
+	do_callback (new (&_callbackObject)
+		CommCB_KeepAlive());
+	
+// 	debug_comm ();
+}
+
+/******************************************************************/
 /******************************************************************/
 
 void Comm::transmitIdentity (const char* identity)
@@ -149,6 +164,24 @@ void Comm::transmitIdentity (const char* identity)
 	if (packet) {
 
 		new (packet->body()) response_type (identity);
+		packet->seal();
+
+		if (transmit (packet, packet->size()) == 0)
+			delete packet;
+	}
+}
+
+/******************************************************************/
+
+void Comm::transmitKeepAlive (void)
+{
+	typedef CommResponse_KeepAlive response_type;
+	typedef QP4_Packet<sizeof (response_type)> packet_type;
+	packet_type* packet = new packet_type;
+
+	if (packet) {
+
+		new (packet->body()) response_type();
 		packet->seal();
 
 		if (transmit (packet, packet->size()) == 0)

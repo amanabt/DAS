@@ -2,7 +2,6 @@
 
 #include "../include/Application.h"
 #include "../include/firmware_version.h"
-// #include "../include/Calibration.h"
 #include "../../sys/include/hardware.h"
 
 #include <stdlib.h>
@@ -108,6 +107,8 @@ void Application::appCommCB (const CommCB* oCB)
 	{
 		&Application::nopCB,
 		&Application::identityCB,
+
+		&Application::keepAliveCB
 	};
 
 	uint16_t cbcode = static_cast<uint16_t> (oCB->code());
@@ -124,7 +125,22 @@ void Application::nopCB (const CommCB*)
 void Application::identityCB (const CommCB*)
 {
 	_active_session = true;
-	_comm->transmitIdentity ("PHY315-DAQ");
+	_comm->transmitIdentity ("DAS-PHY315");
+}
+
+void Application::keepAliveCB (const CommCB* oCB)
+{
+// 	debug ();
+	_active_session = true;
+// 	if (!isSessionActive ()) return;
+// // 	debug ();
+// 	auto pCB = 
+// 		reinterpret_cast<const CommCB_KeepAlive*> (oCB);
+// 
+// 	_active_session = true;
+// 	_end_session_after = _timer->ticks() +
+// 		_timer->ticks(pCB->leaseTime ());
+	_comm->transmitKeepAlive();
 }
 
 /********************************************************************/

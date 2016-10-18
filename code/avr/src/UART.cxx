@@ -136,7 +136,7 @@ void UART::baudrate (uint32_t baudrate)
 
 /***************************************************************/
 
-ISR (USART_RX_vect)
+ISR (USART_RXC_vect)
 {
 	__this->receiveCompleteISR();
 }
@@ -253,7 +253,7 @@ const void* UART::async_write_complete (void)
 
 /***************************************************************/
 
-ISR (USART_TX_vect)
+ISR (USART_TXC_vect)
 {
 	__this->transmitCompleteISR();
 }

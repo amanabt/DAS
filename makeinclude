@@ -11,7 +11,7 @@ FLAGS = \
 	-std=c++11 \
 	-Wall -O3 \
 	-fno-threadsafe-statics -fdata-sections -ffunction-sections -fno-exceptions \
-	-mmcu=atmega328 \
+	-mmcu=atmega8 \
 	-fverbose-asm -g -Wa,-a=${basename $<}.s \
 	-DTIMER_INTERVAL=10e-3 \
 	-DF_CPU=8000000UL \
@@ -19,7 +19,7 @@ FLAGS = \
 
 CFLAGS = $(FLAGS) -c
 MFLAGS = $(FLAGS) -M
-LFLAGS = -mmcu=atmega328 -Wl,--gc-sections,-Map,app.map
+LFLAGS = -mmcu=atmega8 -Wl,--gc-sections,-Map,app.map
 
 INCLUDE = \
 	-I $(top_builddir)/code/stl \

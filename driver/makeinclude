@@ -1,0 +1,31 @@
+MFLAGS = -Wall -static -O3 -std=c++11 -M -MT $(basename $<).lo
+CFLAGS = -Wall -static -O3 -std=c++11 -c
+LFLAGS = -Wall -static -O3 -std=c++11
+
+DEPGEN  = g++ $(MFLAGS)
+COMPILE = libtool --mode=compile g++ $(CFLAGS)
+LINK    = libtool --mode=link g++ $(LFLAGS)
+
+LIBS = \
+	$(top_builddir)/code/sys/src/libsys.la \
+	$(top_builddir)/code/utils/src/libutils.la \
+	$(top_builddir)/code/driver/src/libdriver.la
+
+FLUID = fluid
+RM = rm -rfv
+
+INSTALL_PREFIX       = /usr/local
+INSTALL_INCLUDE_DIR  = $(INSTALL_PREFIX)/include/QAFE
+
+ARCH            = $(shell getconf LONG_BIT)
+INSTALL_LIB_32  = lib
+INSTALL_LIB_64  = lib64
+INSTALL_LIB_DIR = $(INSTALL_PREFIX)/$(INSTALL_LIB_$(ARCH))
+
+UDEV_RULES_FOLDER = /etc/udev/rules.d
+
+%.dep: %.cxx
+	$(DEPGEN) $< -o $@
+
+%.lo: %.cxx
+	$(COMPILE) $< -o $@

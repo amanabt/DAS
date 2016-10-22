@@ -1,0 +1,37 @@
+[NOTE]
+
+1. Our Lab has type K thermocouple.
+2. 8-Lead MSOP
+3. 8-Lead SOIC
+4. 10-Lead MSOP
+5. 10-Lead MSOP
+6. 8-Lead MSOP
+7. 14pin socket DIP
+1uF Ceramic
+10uF 5
+100nF
+0.1uF Ceramic 12
+0.33uF Ceramic 5
+47uF Electrolytic 6
+75 Ohm
+100uH Inductor 3
+
+10. 500ohm precision resistors 10ppm/K
+11. Inamps
+12. Opamps
+13. Digital isolators
+14. DC Voltage regulators.
+15. GPB
+16. Male and Female Berg strips.`
+17. LM35
+18. Crocodile clips
+19. Breadboard wires
+20. 10uF Ceramic
+21. 9V Battery and Connector
+22. Linear Regulator (7805)
+23. Diodes
+24. 100K 10
+25. 1K 10
+
+Disassembling Arduino2560
+1. LDO NX1117CE not checked

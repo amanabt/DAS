@@ -15,13 +15,19 @@ enum OPCODE
 class CommPacket
 {
 public:
-	CommPacket (OPCODE opcode) :
-	_opcode (opcode)
-	{}
+	CommPacket (OPCODE opcode)
+  {
+    _sof[0] = 'I';
+    _sof[1] = 'P';
+	  _opcode = opcode;
+  }
+public:
+  uint16_t opcode (void) const
+  { return _opcode; }
 
 private:
+  char     _sof[2];
 	uint16_t _opcode;
-	uint16_t _reserved;
 };
 
 class CommRequest_Identity : CommPacket
@@ -52,10 +58,11 @@ public:
 	
 public:
 	void transmit (const char* packet, uint32_t size);
-	void transmit (void);
-
+  void transmit (void);
+  uint16_t interpret (const char* request);
+  
 public:
-	void transmitIdentity (const char* identity) const;
+	void packetIdentity (const char* identity) const;
 };
 
 #endif

@@ -5,7 +5,7 @@
 #include <stdlib.h>
 
 class Application;
-String check (void);
+void check (void);
 //enum OPCODE
 //{
 //  NOP = 0,
@@ -22,16 +22,12 @@ void setup() {
 }
 
 void loop() {
+  check();
+}
 
-  char c = Serial.read();
-  auto opcode = atoi (&c);
+void check (void)
+{
   
-  if (opcode == OPCODE::IDN)
-    Serial.println ("DAQ_PHY315");
-  if (opcode == OPCODE::ROOM_TEMP)
-    Serial.println ("27.0");
-    Comm o;
-    o.transmit();
 }
 
 class Application

@@ -13,10 +13,10 @@ Comm::transmit (void)
 }
 
 void
-Comm::transmitIdentity (const char* identity) const
+Comm::packetIdentity (const char* identity)
 {
 	auto o = CommResponse_Identity (identity);
 	uint32_t size = sizeof (CommResponse_Identity)
-	char* packet = new char[size];
+	char* packet = new char[size] (reinterpret_cast<char*> (o));
 	this->transmit (packet, size);
 }

@@ -13,8 +13,14 @@ Comm::transmit (void)
 	volatile int i = 0;
 }
 
+uint16_t
+Comm::interpret (const char* request)
+{
+  auto base = reinterpret_cast <const CommPacket*> (request);
+  return base->opcode();
+}
 void
-Comm::transmitIdentity (const char* identity) const
+Comm::packetIdentity (const char* identity) const
 {
 	auto o = CommResponse_Identity (identity);
 	uint32_t size = sizeof (CommResponse_Identity);

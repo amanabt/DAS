@@ -797,7 +797,27 @@ Element["" "CAPPR-254P-600D__AVX_TAP-Series-S-Form-F" "C6" "unknown" 300.00mil 3
 
 	)
 
-Element["" "DIO_D106-L205-P400-mils" "D2" "unknown" 600.00mil 200.00mil 0.0000 0.0000 0 100 ""]
+Element["" "CAPPR-254P-600D__AVX_TAP-Series-S-Form-F" "C5" "unknown" 700.00mil 300.00mil 85.50mil -165.72mil 0 100 ""]
+(
+	Pin[-50.00mil 0.0000 60.00mil 20.00mil 80.00mil 35.00mil "" "1" "edge2"]
+	Pin[50.00mil 0.0000 60.00mil 20.00mil 80.00mil 35.00mil "" "2" "edge2"]
+	ElementLine [-143.11mil 0.0000 -183.11mil 0.0000 10.00mil]
+	ElementLine [-163.11mil 20.00mil -163.11mil -20.00mil 10.00mil]
+	ElementArc [0.0000 0.0000 113.11mil 113.11mil 0 360 10.00mil]
+
+	)
+
+Element["" "CAPPR-254P-600D__AVX_TAP-Series-S-Form-F" "C4" "unknown" 1200.00mil 300.00mil 85.50mil -165.72mil 0 100 ""]
+(
+	Pin[-50.00mil 0.0000 60.00mil 20.00mil 80.00mil 35.00mil "" "1" "edge2"]
+	Pin[50.00mil 0.0000 60.00mil 20.00mil 80.00mil 35.00mil "" "2" "edge2"]
+	ElementLine [-143.11mil 0.0000 -183.11mil 0.0000 10.00mil]
+	ElementLine [-163.11mil 20.00mil -163.11mil -20.00mil 10.00mil]
+	ElementArc [0.0000 0.0000 113.11mil 113.11mil 0 360 10.00mil]
+
+	)
+
+Element["" "DIO_D106-L205-P400-mils" "D2" "unknown" 1400.00mil 200.00mil 0.0000 0.0000 0 100 ""]
 (
 	Pin[0.0000 0.0000 75.00mil 30.00mil 81.00mil 52.00mil "" "1" "edge2"]
 	Pin[400.00mil 0.0000 75.00mil 30.00mil 81.00mil 52.00mil "" "2" "edge2"]
@@ -810,7 +830,7 @@ Element["" "DIO_D106-L205-P400-mils" "D2" "unknown" 600.00mil 200.00mil 0.0000 0
 
 	)
 
-Element["" "TO220-3N" "P2" "unknown" 1300.00mil 300.00mil -100.00mil 75.00mil 0 100 ""]
+Element["" "TO220-3N" "P2" "unknown" 2100.00mil 300.00mil -100.00mil 75.00mil 0 100 ""]
 (
 	Pin[0.0000 0.0000 86.00mil 20.00mil 106.00mil 67.00mil "" "1" "edge2"]
 	Pin[100.00mil 0.0000 86.00mil 20.00mil 106.00mil 67.00mil "" "2" "edge2"]
@@ -824,7 +844,7 @@ Element["" "TO220-3N" "P2" "unknown" 1300.00mil 300.00mil -100.00mil 75.00mil 0 
 
 	)
 
-Element["" "DIO_D106-L205-P400-mils" "D1" "unknown" 1700.00mil 200.00mil 0.0000 0.0000 0 100 ""]
+Element["" "DIO_D106-L205-P400-mils" "D1" "unknown" 2600.00mil 200.00mil 0.0000 0.0000 0 100 ""]
 (
 	Pin[0.0000 0.0000 75.00mil 30.00mil 81.00mil 52.00mil "" "1" "edge2"]
 	Pin[400.00mil 0.0000 75.00mil 30.00mil 81.00mil 52.00mil "" "2" "edge2"]
@@ -837,7 +857,37 @@ Element["" "DIO_D106-L205-P400-mils" "D1" "unknown" 1700.00mil 200.00mil 0.0000 
 
 	)
 
-Element["" "TO220-3N" "P1" "unknown" 2400.00mil 300.00mil -100.00mil 75.00mil 0 100 ""]
+Element["" "CAPPR-254P-600D__AVX_TAP-Series-S-Form-F" "C3" "unknown" 3300.00mil 300.00mil 85.50mil -165.72mil 0 100 ""]
+(
+	Pin[-50.00mil 0.0000 60.00mil 20.00mil 80.00mil 35.00mil "" "1" "edge2"]
+	Pin[50.00mil 0.0000 60.00mil 20.00mil 80.00mil 35.00mil "" "2" "edge2"]
+	ElementLine [-143.11mil 0.0000 -183.11mil 0.0000 10.00mil]
+	ElementLine [-163.11mil 20.00mil -163.11mil -20.00mil 10.00mil]
+	ElementArc [0.0000 0.0000 113.11mil 113.11mil 0 360 10.00mil]
+
+	)
+
+Element["" "CAPPR-254P-600D__AVX_TAP-Series-S-Form-F" "C1" "unknown" 3700.00mil 300.00mil 85.50mil -165.72mil 0 100 ""]
+(
+	Pin[-50.00mil 0.0000 60.00mil 20.00mil 80.00mil 35.00mil "" "1" "edge2"]
+	Pin[50.00mil 0.0000 60.00mil 20.00mil 80.00mil 35.00mil "" "2" "edge2"]
+	ElementLine [-143.11mil 0.0000 -183.11mil 0.0000 10.00mil]
+	ElementLine [-163.11mil 20.00mil -163.11mil -20.00mil 10.00mil]
+	ElementArc [0.0000 0.0000 113.11mil 113.11mil 0 360 10.00mil]
+
+	)
+
+Element["" "CAPPR-254P-600D__AVX_TAP-Series-S-Form-F" "C2" "unknown" 4100.00mil 300.00mil 85.50mil -165.72mil 0 100 ""]
+(
+	Pin[-50.00mil 0.0000 60.00mil 20.00mil 80.00mil 35.00mil "" "1" "edge2"]
+	Pin[50.00mil 0.0000 60.00mil 20.00mil 80.00mil 35.00mil "" "2" "edge2"]
+	ElementLine [-143.11mil 0.0000 -183.11mil 0.0000 10.00mil]
+	ElementLine [-163.11mil 20.00mil -163.11mil -20.00mil 10.00mil]
+	ElementArc [0.0000 0.0000 113.11mil 113.11mil 0 360 10.00mil]
+
+	)
+
+Element["" "TO220-3N" "P1" "unknown" 4400.00mil 300.00mil -100.00mil 75.00mil 0 100 ""]
 (
 	Pin[0.0000 0.0000 86.00mil 20.00mil 106.00mil 67.00mil "" "1" "edge2"]
 	Pin[100.00mil 0.0000 86.00mil 20.00mil 106.00mil 67.00mil "" "2" "edge2"]
@@ -851,7 +901,7 @@ Element["" "TO220-3N" "P1" "unknown" 2400.00mil 300.00mil -100.00mil 75.00mil 0 
 
 	)
 
-Element["" "CON_HDR-200P-4C-1R-4N__JST_B4B-PH-K" "CONN1" "unknown" 3000.00mil 200.00mil -194.88mil -158.57mil 0 100 ""]
+Element["" "CON_HDR-200P-4C-1R-4N__JST_B4B-PH-K" "CONN1" "unknown" 5100.00mil 200.00mil -194.88mil -158.57mil 0 100 ""]
 (
 	Pin[118.11mil 21.65mil 50.00mil 20.00mil 70.00mil 29.00mil "" "1" "edge2"]
 	Pin[39.37mil 21.65mil 50.00mil 20.00mil 70.00mil 29.00mil "" "2" "edge2"]
@@ -881,7 +931,7 @@ Element["" "CON_HDR-200P-4C-1R-4N__JST_B4B-PH-K" "CONN1" "unknown" 3000.00mil 20
 
 	)
 
-Element["" "DIP-8-300" "U4" "REF02AP" 3500.00mil 400.00mil -210.00mil -265.00mil 0 100 ""]
+Element["" "DIP-8-300" "U4" "REF02AP" 5600.00mil 400.00mil -210.00mil -265.00mil 0 100 ""]
 (
 	Pin[-150.00mil -150.00mil 60.00mil 20.00mil 80.00mil 35.00mil "" "1" "edge2"]
 	Pin[-150.00mil -50.00mil 60.00mil 20.00mil 80.00mil 35.00mil "" "2" "edge2"]
@@ -917,7 +967,7 @@ Element["" "DIP-8-300" "U4" "REF02AP" 3500.00mil 400.00mil -210.00mil -265.00mil
 
 	)
 
-Element["" "CAPR-254P-254W-381L-533H__Kemet_C315" "C5" "100nF" 3900.00mil 200.00mil -70.00mil -115.00mil 0 100 ""]
+Element["" "CAPR-254P-254W-381L-533H__Kemet_C315" "C11" "100nF" 200.00mil 800.00mil -70.00mil -115.00mil 0 100 ""]
 (
 	Pin[-50.00mil 0.0000 60.00mil 20.00mil 80.00mil 35.00mil "" "1" "edge2"]
 	Pin[50.00mil 0.0000 60.00mil 20.00mil 80.00mil 35.00mil "" "2" "edge2"]
@@ -930,7 +980,7 @@ Element["" "CAPR-254P-254W-381L-533H__Kemet_C315" "C5" "100nF" 3900.00mil 200.00
 
 	)
 
-Element["" "DIP-14-300" "U3" "unknown" 4300.00mil 500.00mil -210.00mil -415.00mil 0 100 ""]
+Element["" "DIP-14-300" "U3" "unknown" 600.00mil 1100.00mil -210.00mil -415.00mil 0 100 ""]
 (
 	Pin[-150.00mil -300.00mil 60.00mil 20.00mil 80.00mil 35.00mil "" "1" ""]
 	Pin[-150.00mil -200.00mil 60.00mil 20.00mil 80.00mil 35.00mil "" "2" ""]
@@ -984,7 +1034,7 @@ Element["" "DIP-14-300" "U3" "unknown" 4300.00mil 500.00mil -210.00mil -415.00mi
 
 	)
 
-Element["" "CAPPR-254P-760D__Kemet_Ultradip-II-T350-H" "C1" "10uF" 4900.00mil 300.00mil 106.53mil -194.17mil 0 100 ""]
+Element["" "CAPPR-254P-760D__Kemet_Ultradip-II-T350-H" "C7" "10uF" 1200.00mil 900.00mil 106.53mil -194.17mil 0 100 ""]
 (
 	Pin[-50.00mil 0.0000 60.00mil 20.00mil 80.00mil 35.00mil "" "1" "edge2"]
 	Pin[50.00mil 0.0000 60.00mil 20.00mil 80.00mil 35.00mil "" "2" "edge2"]
@@ -994,7 +1044,7 @@ Element["" "CAPPR-254P-760D__Kemet_Ultradip-II-T350-H" "C1" "10uF" 4900.00mil 30
 
 	)
 
-Element["" "RES-635P-340L-190D__Yageo-MFR-12" "R3" "1K" 5300.00mil 200.00mil -51.92mil -102.40mil 0 100 ""]
+Element["" "RES-635P-340L-190D__Yageo-MFR-12" "R3" "1K" 1600.00mil 800.00mil -51.92mil -102.40mil 0 100 ""]
 (
 	Pin[-125.00mil 0.0000 50.00mil 20.00mil 70.00mil 28.99mil "" "1" "edge2"]
 	Pin[125.00mil 0.0000 50.00mil 20.00mil 70.00mil 28.99mil "" "2" "edge2"]
@@ -1006,7 +1056,7 @@ Element["" "RES-635P-340L-190D__Yageo-MFR-12" "R3" "1K" 5300.00mil 200.00mil -51
 
 	)
 
-Element["" "RES-635P-340L-190D__Yageo-MFR-12" "R2" "1K" 5700.00mil 200.00mil -51.92mil -102.40mil 0 100 ""]
+Element["" "RES-635P-340L-190D__Yageo-MFR-12" "R2" "1K" 2000.00mil 800.00mil -51.92mil -102.40mil 0 100 ""]
 (
 	Pin[-125.00mil 0.0000 50.00mil 20.00mil 70.00mil 28.99mil "" "1" "edge2"]
 	Pin[125.00mil 0.0000 50.00mil 20.00mil 70.00mil 28.99mil "" "2" "edge2"]
@@ -1018,7 +1068,7 @@ Element["" "RES-635P-340L-190D__Yageo-MFR-12" "R2" "1K" 5700.00mil 200.00mil -51
 
 	)
 
-Element["" "RES-635P-340L-190D__Yageo-MFR-12" "R1" "1K" 300.00mil 1000.00mil -51.92mil -102.40mil 0 100 ""]
+Element["" "RES-635P-340L-190D__Yageo-MFR-12" "R1" "1K" 2400.00mil 800.00mil -51.92mil -102.40mil 0 100 ""]
 (
 	Pin[-125.00mil 0.0000 50.00mil 20.00mil 70.00mil 28.99mil "" "1" "edge2"]
 	Pin[125.00mil 0.0000 50.00mil 20.00mil 70.00mil 28.99mil "" "2" "edge2"]
@@ -1030,7 +1080,7 @@ Element["" "RES-635P-340L-190D__Yageo-MFR-12" "R1" "1K" 300.00mil 1000.00mil -51
 
 	)
 
-Element["" "RES-635P-340L-190D__Yageo-MFR-12" "R4" "499R" 700.00mil 1000.00mil -51.92mil -102.40mil 0 100 ""]
+Element["" "RES-635P-340L-190D__Yageo-MFR-12" "R4" "499R" 2900.00mil 800.00mil -51.92mil -102.40mil 0 100 ""]
 (
 	Pin[-125.00mil 0.0000 50.00mil 20.00mil 70.00mil 28.99mil "" "1" "edge2"]
 	Pin[125.00mil 0.0000 50.00mil 20.00mil 70.00mil 28.99mil "" "2" "edge2"]
@@ -1042,7 +1092,7 @@ Element["" "RES-635P-340L-190D__Yageo-MFR-12" "R4" "499R" 700.00mil 1000.00mil -
 
 	)
 
-Element["" "CAPR-254P-254W-381L-533H__Kemet_C315" "C2" "100nF" 1100.00mil 1100.00mil -70.00mil -115.00mil 0 100 ""]
+Element["" "CAPR-254P-254W-381L-533H__Kemet_C315" "C8" "100nF" 3200.00mil 800.00mil -70.00mil -115.00mil 0 100 ""]
 (
 	Pin[-50.00mil 0.0000 60.00mil 20.00mil 80.00mil 35.00mil "" "1" "edge2"]
 	Pin[50.00mil 0.0000 60.00mil 20.00mil 80.00mil 35.00mil "" "2" "edge2"]
@@ -1055,7 +1105,7 @@ Element["" "CAPR-254P-254W-381L-533H__Kemet_C315" "C2" "100nF" 1100.00mil 1100.0
 
 	)
 
-Element["" "SOIC8-Breakout" "U1" "AD620" 1400.00mil 1100.00mil 0.0000 0.0000 0 100 ""]
+Element["" "SOIC8-Breakout" "U1" "AD620" 3500.00mil 900.00mil 0.0000 0.0000 0 100 ""]
 (
 	Pin[0.0000 0.0000 60.00mil 20.00mil 66.00mil 35.00mil "" "1" "square"]
 	Pin[0.0000 100.00mil 60.00mil 20.00mil 66.00mil 35.00mil "" "2" ""]
@@ -1072,7 +1122,7 @@ Element["" "SOIC8-Breakout" "U1" "AD620" 1400.00mil 1100.00mil 0.0000 0.0000 0 1
 
 	)
 
-Element["" "CAPR-254P-254W-381L-533H__Kemet_C315" "C4" "100nF" 1900.00mil 1100.00mil -70.00mil -115.00mil 0 100 ""]
+Element["" "CAPR-254P-254W-381L-533H__Kemet_C315" "C10" "100nF" 4000.00mil 800.00mil -70.00mil -115.00mil 0 100 ""]
 (
 	Pin[-50.00mil 0.0000 60.00mil 20.00mil 80.00mil 35.00mil "" "1" "edge2"]
 	Pin[50.00mil 0.0000 60.00mil 20.00mil 80.00mil 35.00mil "" "2" "edge2"]
@@ -1085,7 +1135,7 @@ Element["" "CAPR-254P-254W-381L-533H__Kemet_C315" "C4" "100nF" 1900.00mil 1100.0
 
 	)
 
-Element["" "CAPR-254P-254W-381L-533H__Kemet_C315" "C3" "100nF" 2200.00mil 1100.00mil -70.00mil -115.00mil 0 100 ""]
+Element["" "CAPR-254P-254W-381L-533H__Kemet_C315" "C9" "100nF" 4300.00mil 800.00mil -70.00mil -115.00mil 0 100 ""]
 (
 	Pin[-50.00mil 0.0000 60.00mil 20.00mil 80.00mil 35.00mil "" "1" "edge2"]
 	Pin[50.00mil 0.0000 60.00mil 20.00mil 80.00mil 35.00mil "" "2" "edge2"]
@@ -1098,7 +1148,7 @@ Element["" "CAPR-254P-254W-381L-533H__Kemet_C315" "C3" "100nF" 2200.00mil 1100.0
 
 	)
 
-Element["" "MSOP-10_DIP_Breakout" "U2" "AD7685" 2500.00mil 1300.00mil 0.0000 0.0000 0 100 ""]
+Element["" "MSOP-10_DIP_Breakout" "U2" "AD7685" 4600.00mil 1100.00mil 0.0000 0.0000 0 100 ""]
 (
 	Pin[400.00mil 400.00mil 36.00mil 20.00mil 42.00mil 20.00mil "" "6" ""]
 	Pin[400.00mil 300.00mil 36.00mil 20.00mil 42.00mil 20.00mil "" "7" ""]
@@ -1116,49 +1166,6 @@ Element["" "MSOP-10_DIP_Breakout" "U2" "AD7685" 2500.00mil 1300.00mil 0.0000 0.0
 	ElementLine [-100.00mil -300.00mil -100.00mil 700.00mil 10.00mil]
 
 	)
-Rat[2100.00mil 200.00mil 5 2400.00mil 300.00mil 5  ""]
-Rat[600.00mil 200.00mil 5 1300.00mil 300.00mil 5  ""]
-Rat[1050.00mil 1100.00mil 5 1600.00mil 1200.00mil 5  ""]
-Rat[1600.00mil 1200.00mil 5 1850.00mil 1100.00mil 5  ""]
-Rat[1850.00mil 1100.00mil 5 2500.00mil 1400.00mil 5  ""]
-Rat[2500.00mil 1400.00mil 5 2900.00mil 1400.00mil 5  ""]
-Rat[2900.00mil 1400.00mil 5 2900.00mil 1300.00mil 5  ""]
-Rat[1850.00mil 1100.00mil 5 1700.00mil 200.00mil 5  ""]
-Rat[1700.00mil 200.00mil 5 2600.00mil 300.00mil 5  ""]
-Rat[2600.00mil 300.00mil 5 3335.00mil 350.00mil 5  ""]
-Rat[3350.00mil 350.00mil 5 4135.00mil 500.00mil 0  ""]
-Rat[250.00mil 300.00mil 5 1000.00mil 200.00mil 5  ""]
-Rat[1000.00mil 200.00mil 5 1500.00mil 300.00mil 5  ""]
-Rat[1150.00mil 1100.00mil 5 1400.00mil 1400.00mil 5  ""]
-Rat[1400.00mil 1400.00mil 5 1600.00mil 1400.00mil 5  ""]
-Rat[1600.00mil 1400.00mil 5 1950.00mil 1100.00mil 5  ""]
-Rat[1950.00mil 1100.00mil 5 2150.00mil 1100.00mil 5  ""]
-Rat[2150.00mil 1100.00mil 5 2250.00mil 1100.00mil 5  ""]
-Rat[2250.00mil 1100.00mil 5 2500.00mil 1600.00mil 5  ""]
-Rat[2500.00mil 1600.00mil 5 2500.00mil 1700.00mil 5  ""]
-Rat[2250.00mil 1100.00mil 5 2500.00mil 300.00mil 5  ""]
-Rat[2500.00mil 300.00mil 5 2881.90mil 234.15mil 0  ""]
-Rat[2881.90mil 234.15mil 5 3335.00mil 550.00mil 5  ""]
-Rat[3350.00mil 550.00mil 5 3850.00mil 200.00mil 5  ""]
-Rat[3850.00mil 200.00mil 5 3950.00mil 200.00mil 5  ""]
-Rat[3950.00mil 200.00mil 5 4450.00mil 500.00mil 5  ""]
-Rat[4465.00mil 500.00mil 0 5175.00mil 200.00mil 5  ""]
-Rat[1150.00mil 1100.00mil 5 1400.00mil 300.00mil 5  ""]
-Rat[1400.00mil 300.00mil 5 350.00mil 300.00mil 5  ""]
-Rat[2500.00mil 1300.00mil 5 4135.00mil 300.00mil 5  ""]
-Rat[4135.00mil 300.00mil 0 4135.00mil 200.00mil 0  ""]
-Rat[75.2003mm 234.15mil 0 2900.00mil 1500.00mil 5  ""]
-Rat[77.2000mm 234.15mil 0 2900.00mil 1600.00mil 5  ""]
-Rat[79.2000mm 234.15mil 0 2900.00mil 1700.00mil 5  ""]
-Rat[1600.00mil 1300.00mil 5 2500.00mil 1500.00mil 5  ""]
-Rat[4950.00mil 300.00mil 5 5425.00mil 200.00mil 5  ""]
-Rat[5425.00mil 200.00mil 5 5825.00mil 200.00mil 5  ""]
-Rat[4950.00mil 300.00mil 5 1400.00mil 1200.00mil 5  ""]
-Rat[575.00mil 1000.00mil 5 1400.00mil 1100.00mil 5  ""]
-Rat[825.00mil 1000.00mil 5 1600.00mil 1100.00mil 5  ""]
-Rat[4850.00mil 300.00mil 5 1400.00mil 1300.00mil 5  ""]
-Rat[1400.00mil 1300.00mil 5 425.00mil 1000.00mil 5  ""]
-Rat[4135.00mil 400.00mil 0 3665.00mil 450.00mil 5  ""]
 Layer(1 "top")
 (
 )
@@ -1188,132 +1195,4 @@ Layer(9 "silk")
 )
 Layer(10 "silk")
 (
-)
-NetList()
-(
-	Net("+9V" "(unknown)")
-	(
-		Connect("C1-1")
-		Connect("C2-1")
-		Connect("D1-2")
-		Connect("P1-1")
-		Connect("R1-2")
-	)
-	Net("-9V" "(unknown)")
-	(
-		Connect("C4-1")
-		Connect("C5-1")
-		Connect("D2-1")
-		Connect("P2-1")
-		Connect("R2-2")
-	)
-	Net("A+5V" "(unknown)")
-	(
-		Connect("C2-1")
-		Connect("C3-1")
-		Connect("C3-2")
-		Connect("C4-1")
-		Connect("C5-2")
-		Connect("D1-1")
-		Connect("P1-3")
-		Connect("U1-7")
-		Connect("U2-2")
-		Connect("U2-9")
-		Connect("U2-10")
-		Connect("U3-4")
-		Connect("U4-2")
-	)
-	Net("A-5V" "(unknown)")
-	(
-		Connect("C6-1")
-		Connect("D2-2")
-		Connect("P2-3")
-	)
-	Net("AGND" "(unknown)")
-	(
-		Connect("C1-2")
-		Connect("C2-2")
-		Connect("C3-1")
-		Connect("C3-2")
-		Connect("C4-2")
-		Connect("C5-1")
-		Connect("C5-2")
-		Connect("C6-2")
-		Connect("CONN1-4")
-		Connect("P1-2")
-		Connect("P2-2")
-		Connect("R1-1")
-		Connect("R2-1")
-		Connect("R3-1")
-		Connect("U1-4")
-		Connect("U1-5")
-		Connect("U2-4")
-		Connect("U2-5")
-		Connect("U3-11")
-		Connect("U4-4")
-	)
-	Net("unnamed_net1" "(unknown)")
-	(
-		Connect("U2-1")
-		Connect("U3-1")
-		Connect("U3-2")
-	)
-	Net("unnamed_net2" "(unknown)")
-	(
-		Connect("CONN1-3")
-		Connect("U2-8")
-	)
-	Net("unnamed_net3" "(unknown)")
-	(
-		Connect("CONN1-2")
-		Connect("U2-7")
-	)
-	Net("unnamed_net4" "(unknown)")
-	(
-		Connect("CONN1-1")
-		Connect("U2-6")
-	)
-	Net("unnamed_net5" "(unknown)")
-	(
-		Connect("U1-6")
-		Connect("U2-3")
-	)
-	Net("unnamed_net6" "(unknown)")
-	(
-		Connect("C1-2")
-		Connect("R2-2")
-		Connect("R3-2")
-		Connect("U1-2")
-	)
-	Net("unnamed_net7" "(unknown)")
-	(
-		Connect("R4-1")
-		Connect("U1-1")
-	)
-	Net("unnamed_net8" "(unknown)")
-	(
-		Connect("R4-2")
-		Connect("U1-8")
-	)
-	Net("unnamed_net9" "(unknown)")
-	(
-		Connect("C1-1")
-		Connect("R1-2")
-		Connect("U1-3")
-	)
-	Net("unnamed_net10" "(unknown)")
-	(
-		Connect("R1-1")
-		Connect("U?-?")
-	)
-	Net("unnamed_net11" "(unknown)")
-	(
-		Connect("R2-1")
-		Connect("U?-?")
-	)
-	Net("unnamed_net12" "(unknown)")
-	(
-		Connect("U3-3")
-		Connect("U4-6")
-	)
 )

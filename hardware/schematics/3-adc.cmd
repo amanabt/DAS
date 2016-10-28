@@ -4,6 +4,14 @@
 ChangePinName(C6, 2, -)
 ChangePinName(C6, 1, +)
 
+# Start of element C5
+ChangePinName(C5, 2, -)
+ChangePinName(C5, 1, +)
+
+# Start of element C4
+ChangePinName(C4, 2, -)
+ChangePinName(C4, 1, +)
+
 # Start of element D2
 ChangePinName(D2, 2, 2)
 ChangePinName(D2, 1, 1)
@@ -16,6 +24,18 @@ ChangePinName(P2, 1, 1)
 # Start of element D1
 ChangePinName(D1, 2, 2)
 ChangePinName(D1, 1, 1)
+
+# Start of element C3
+ChangePinName(C3, 2, -)
+ChangePinName(C3, 1, +)
+
+# Start of element C1
+ChangePinName(C1, 2, -)
+ChangePinName(C1, 1, +)
+
+# Start of element C2
+ChangePinName(C2, 2, -)
+ChangePinName(C2, 1, +)
 
 # Start of element P1
 ChangePinName(P1, 3, 3)
@@ -34,11 +54,9 @@ ChangePinName(U4, 5, 5)
 ChangePinName(U4, 4, GND)
 ChangePinName(U4, 6, OUT)
 
-# Start of element C5
-ChangePinName(C5, 2, -)
-ChangePinName(C5, 1, +)
-ChangePinName(C5, 2, -)
-ChangePinName(C5, 1, +)
+# Start of element C11
+ChangePinName(C11, 2, 2)
+ChangePinName(C11, 1, 1)
 
 # Start of element U3
 ChangePinName(U3, 4, 4)
@@ -47,11 +65,9 @@ ChangePinName(U3, 1, 1)
 ChangePinName(U3, 2, 2)
 ChangePinName(U3, 3, 3)
 
-# Start of element C1
-ChangePinName(C1, 2, -)
-ChangePinName(C1, 1, +)
-ChangePinName(C1, 2, -)
-ChangePinName(C1, 1, +)
+# Start of element C7
+ChangePinName(C7, 2, -)
+ChangePinName(C7, 1, +)
 
 # Start of element R3
 ChangePinName(R3, 1, 1)
@@ -75,11 +91,9 @@ ChangePinName(R1, 2, 2)
 ChangePinName(R4, 1, 1)
 ChangePinName(R4, 2, 2)
 
-# Start of element C2
-ChangePinName(C2, 2, -)
-ChangePinName(C2, 1, +)
-ChangePinName(C2, 2, -)
-ChangePinName(C2, 1, +)
+# Start of element C8
+ChangePinName(C8, 2, 2)
+ChangePinName(C8, 1, 1)
 
 # Start of element U1
 ChangePinName(U1, 5, REF)
@@ -91,17 +105,13 @@ ChangePinName(U1, 8, RG2)
 ChangePinName(U1, 1, RG1)
 ChangePinName(U1, 2, IN-)
 
-# Start of element C4
-ChangePinName(C4, 2, -)
-ChangePinName(C4, 1, +)
-ChangePinName(C4, 2, -)
-ChangePinName(C4, 1, +)
+# Start of element C10
+ChangePinName(C10, 2, 2)
+ChangePinName(C10, 1, 1)
 
-# Start of element C3
-ChangePinName(C3, 2, -)
-ChangePinName(C3, 1, +)
-ChangePinName(C3, 2, -)
-ChangePinName(C3, 1, +)
+# Start of element C9
+ChangePinName(C9, 2, 2)
+ChangePinName(C9, 1, 1)
 
 # Start of element U2
 ChangePinName(U2, 4, IN-)

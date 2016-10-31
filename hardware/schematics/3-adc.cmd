@@ -61,6 +61,10 @@ ChangePinName(P1, 3, 3)
 ChangePinName(P1, 2, 2)
 ChangePinName(P1, 1, 1)
 
+# Start of element C13
+ChangePinName(C13, 2, 2)
+ChangePinName(C13, 1, 1)
+
 # Start of element C12
 ChangePinName(C12, 2, 2)
 ChangePinName(C12, 1, 1)

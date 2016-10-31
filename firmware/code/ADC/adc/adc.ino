@@ -1,10 +1,10 @@
 #include <SPI.h>
 
-const int conv_pin = 6;
+const int conv_pin = 10;
 
 void setup() {
   Serial.begin(230400);
-  SPI.beginTransaction(SPISettings(8000000, MSBFIRST, SPI_MODE0));
+  SPI.beginTransaction(SPISettings(4000000, MSBFIRST, SPI_MODE0));
   // start the SPI library:
   SPI.begin();
 
@@ -15,10 +15,10 @@ void setup() {
 
 void loop() {
   digitalWrite (conv_pin, HIGH);
-  delayMicroseconds(10);
+  delayMicroseconds(50);
   digitalWrite (conv_pin, LOW);
   unsigned int tempData = readRegister(0x21, 2);
-  delayMicroseconds(10);
+  delayMicroseconds(50);
   Serial.println(tempData);
 }
 

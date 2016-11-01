@@ -4,22 +4,30 @@ const int conv_pin = 10;
 
 void setup() {
   Serial.begin(230400);
-  SPI.beginTransaction(SPISettings(4000000, MSBFIRST, SPI_MODE0));
+  SPI.beginTransaction(SPISettings(1000000, MSBFIRST, SPI_MODE0));
   // start the SPI library:
   SPI.begin();
 
   // initalize the  data ready and chip select pins:
   pinMode(conv_pin, OUTPUT);
   digitalWrite (conv_pin, HIGH);
+  analogReference(INTERNAL);
 }
 
 void loop() {
   digitalWrite (conv_pin, HIGH);
-  delayMicroseconds(50);
+  delayMicroseconds(2.2);
   digitalWrite (conv_pin, LOW);
   unsigned int tempData = readRegister(0x21, 2);
-  delayMicroseconds(50);
-  Serial.println(tempData);
+  delayMicroseconds(1);
+  Serial.print (tempData);
+  Serial.print (",");
+  int coldJunctionTemperature = analogRead(A2);
+  Serial.print (coldJunctionTemperature);
+  Serial.print (",");
+  int thermoelectric_voltage = analogRead(A0);
+  Serial.print (thermoelectric_voltage);
+  Serial.print ("\n");
 }
 
 unsigned int readRegister(byte thisRegister, int bytesToRead) {

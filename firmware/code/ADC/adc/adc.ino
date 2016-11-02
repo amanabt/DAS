@@ -28,10 +28,10 @@ void loop() {
 //  Serial.print (",");
   double temp = tempData * 7.629510948348211e-05;
   Serial.print (tempData);
-//  Serial.print (",");
+  Serial.print (",");
   int coldJunctionRaw = analogRead(A2);
-  double coldJunctionTemperature = coldJunctionRaw * 0.00107421875;
-//  Serial.print (coldJunctionTemperature);
+//  double coldJunctionTemperature = coldJunctionRaw * 0.00107421875;
+  Serial.print (coldJunctionRaw);
 //  Serial.print (",");
 //  int thermoelectric_voltage = analogRead(A0);
 //  Serial.print (thermoelectric_voltage);

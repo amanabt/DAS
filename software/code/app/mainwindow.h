@@ -53,10 +53,10 @@ public:
 	{ _x.push_back (x); _y.push_back (y); }
 	void clear_dataset (void)
     { _x.clear(); _y.clear(); }
+	void update_plot (void) const;
 
 private:
 	void init_plot (void);
-	void update_plot (void) const;
 
 private slots:
 	void on_actionInsert_Plot_triggered (void);

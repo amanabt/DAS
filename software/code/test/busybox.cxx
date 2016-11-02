@@ -21,7 +21,7 @@ bool data_collector (void) {
 	}
 	
 	std::ofstream ofs (
-		"/home/ubermensch/Academics/sem4/PHY315/DAS/software/code/test/b41d86f9-20e2-42ca-8fa7-ab05a1f3ea96",
+		"/home/ubermensch/Academics/sem4/PHY315/DAS/software/code/test/b41d86f9-20e2-42ca-8fa7-ab05a1f3ea96.csv",
 		std::ofstream::out);
 	int i = 0;
 	while(fgets(buff, sizeof(buff), in)!=NULL){

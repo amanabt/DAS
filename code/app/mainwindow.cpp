@@ -52,7 +52,7 @@ MainWindow::~MainWindow()
 }
 
 void
-MainWindow::init_plot (void) const
+MainWindow::init_plot (void)
 {
 	ui->plot->addGraph();
 	ui->plot->graph(0)->setPen(QPen(Qt::blue));

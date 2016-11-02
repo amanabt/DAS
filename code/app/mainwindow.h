@@ -51,9 +51,11 @@ public:
 public:
 	void add_datapoint (double x, double y)
 	{ _x.push_back (x); _y.push_back (y); }
+	void clear_dataset (void)
+    { _x.clear(); _y.clear(); }
 
 private:
-	void init_plot (void) const;
+	void init_plot (void);
 	void update_plot (void) const;
 
 private slots:

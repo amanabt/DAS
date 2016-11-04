@@ -1,0 +1,1 @@
+/usr/bin/ccache g++  -O3 -Wall -std=c++11 -lpthread   CMakeFiles/busybox.dir/busybox.cxx.o  -o busybox -rdynamic 

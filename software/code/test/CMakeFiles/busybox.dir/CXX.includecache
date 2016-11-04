@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/ubermensch/Academics/sem4/PHY315/DAS/software/code/test/busybox.cxx
+iostream
+-
+stdio.h
+-
+fstream
+-
+thread
+-
+cctype
+-
+

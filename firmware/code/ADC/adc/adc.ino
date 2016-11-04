@@ -1,7 +1,8 @@
 #include <SPI.h>
 
 const int conv_pin = 10;
-
+unsigned long time_origin = 0;
+unsigned long acq_time[3];
 void setup() {
   Serial.begin(9600);
 //  SPI.beginTransaction(SPISettings(1000000, MSBFIRST, SPI_MODE0));
@@ -15,26 +16,37 @@ void setup() {
   pinMode(conv_pin, OUTPUT);
   digitalWrite (conv_pin, LOW);
   analogReference(INTERNAL);
+  time_origin = millis();
 }
 
 void loop() {
   digitalWrite (conv_pin, HIGH);
-  delay(1);
+  delay(10);
   digitalWrite (conv_pin, LOW);
 //  unsigned int tempData = readRegister(0x21, 4);
-  unsigned int tempData = SPI.transfer16(0x00);
-  delay(1);
-//  Serial.print (tempData, BIN);
-//  Serial.print (",");
-  double temp = tempData * 7.629510948348211e-05;
-  Serial.print (tempData);
-//  Serial.print (",");
+  acq_time[0] = millis() - time_origin;
+  unsigned int thermocoupleDataRaw = SPI.transfer16(0x00);
+  delay(10);
+  acq_time[1] = millis();
+  int thermoelectricVoltageRaw = analogRead(A0);
+
+  delay(10);
+  acq_time[2] = millis();
   int coldJunctionRaw = analogRead(A2);
-  double coldJunctionTemperature = coldJunctionRaw * 0.00107421875;
-//  Serial.print (coldJunctionTemperature);
-//  Serial.print (",");
-//  int thermoelectric_voltage = analogRead(A0);
-//  Serial.print (thermoelectric_voltage);
+  delay(10);
+  Serial.print (acq_time[0]);
+  Serial.print (",");
+  Serial.print (thermocoupleDataRaw);
+  Serial.print (",");
+
+  Serial.print (acq_time[1]);
+  Serial.print (",");
+  Serial.print (thermoelectricVoltageRaw);
+  Serial.print (",");
+
+  Serial.print (acq_time[2]);
+  Serial.print (",");
+  Serial.print (coldJunctionRaw);
   Serial.print ("\n");
 }
 

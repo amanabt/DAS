@@ -4,7 +4,7 @@ const int conv_pin = 10;
 unsigned long time_origin = 0;
 unsigned long acq_time[3];
 void setup() {
-  Serial.begin(9600);
+  Serial.begin(230400);
 //  SPI.beginTransaction(SPISettings(1000000, MSBFIRST, SPI_MODE0));
   SPI.setClockDivider(SPI_CLOCK_DIV128);
   SPI.setBitOrder(MSBFIRST);
@@ -16,7 +16,7 @@ void setup() {
   pinMode(conv_pin, OUTPUT);
   digitalWrite (conv_pin, LOW);
   analogReference(INTERNAL);
-  time_origin = millis();
+  time_origin = micros();
 }
 
 void loop() {
@@ -24,14 +24,14 @@ void loop() {
   delay(10);
   digitalWrite (conv_pin, LOW);
 //  unsigned int tempData = readRegister(0x21, 4);
-  acq_time[0] = millis() - time_origin;
+  acq_time[0] = micros() - time_origin;
   unsigned int thermocoupleDataRaw = SPI.transfer16(0x00);
   delay(10);
-  acq_time[1] = millis();
+  acq_time[1] = micros();
   int thermoelectricVoltageRaw = analogRead(A0);
 
   delay(10);
-  acq_time[2] = millis();
+  acq_time[2] = micros();
   int coldJunctionRaw = analogRead(A2);
   delay(10);
   Serial.print (acq_time[0]);

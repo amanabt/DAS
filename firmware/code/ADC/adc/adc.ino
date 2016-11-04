@@ -7,6 +7,7 @@ void setup() {
   Serial.begin(230400);
 //  SPI.beginTransaction(SPISettings(1000000, MSBFIRST, SPI_MODE0));
   SPI.setClockDivider(SPI_CLOCK_DIV128);
+  
   SPI.setBitOrder(MSBFIRST);
   SPI.setDataMode(SPI_MODE0);
   // start the SPI library:

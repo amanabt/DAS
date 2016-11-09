@@ -10,7 +10,7 @@ final = []
 for idx in range (9):
 	line = ser.readline()
 
-outputfile = open ("displacement.csv", 'w', newline="\n") 
+outputfile = open ("output.csv", 'w', newline="\n") 
 outwriter = csv.writer (outputfile, delimiter=',')
 while True:
 	line = ser.readline()

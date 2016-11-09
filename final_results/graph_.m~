@@ -1,0 +1,9 @@
+figure;
+x = [0:89811:3781.9];
+y_fit = 224 * exp (-0.0006164*x(0:89811)) + 27;
+subplot(2,1,1);
+plot (t(22:length(t)), y(22:length(y),1));
+plot (x,y_fit);
+subplot(2,1,2);
+plot (y(22:length(y)), thermoelectric_v(22:length(thermoelectric_v)), '*')
+grid on

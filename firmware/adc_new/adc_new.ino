@@ -25,14 +25,14 @@ void loop() {
   delay(10);
   digitalWrite (conv_pin, LOW);
 //  unsigned int tempData = readRegister(0x21, 4);
-  acq_time[0] = micros();
+  acq_time[0] = (micros()) * 1e-6;
   unsigned int thermocoupleDataRaw = SPI.transfer16(0x00);
   delay(10);
-  acq_time[1] = micros();
+  acq_time[1] = (micros()) * 1e-6;
   int thermoelectricVoltageRaw = analogRead(A0);
 
   delay(10);
-  acq_time[2] = micros();
+  acq_time[2] = (micros()) * 1e-6;
   int coldJunctionRaw = analogRead(A2);
   delay(10);
   Serial.print (acq_time[0]);

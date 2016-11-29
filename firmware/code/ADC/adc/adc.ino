@@ -4,7 +4,7 @@ const int conv_pin = 10;
 unsigned long time_origin = 0;
 unsigned long acq_time[3];
 void setup() {
-  Serial.begin(230400);
+  Serial.begin(19200);
 //  SPI.beginTransaction(SPISettings(1000000, MSBFIRST, SPI_MODE0));
   SPI.setClockDivider(SPI_CLOCK_DIV128);
   
